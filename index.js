@@ -1,6 +1,10 @@
-var app3 = new Vue({
-    el: "#app-3",
+var app4 = new Vue({
+    el: "#app-4",
     data: {
-        seen: true
+        todos: [
+            { text: 'Learn JavaScript' },
+            { text: 'Learn Vue' },
+            { text: 'Build something awesome' }
+        ]
     }
 })
