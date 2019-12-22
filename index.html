@@ -23,6 +23,18 @@
         <button v-on:click="reverseMessage">Reverse Message</button>
     </div>
 
+    <div id="app-6">
+        <p>{{ message }}</p>
+        <input v-model="message">
+    </div>
+
+    <!--  app-7 -->
+    <div id="app-7">
+        <ol>
+            <todo-item v-for="item in groceryList" v-bind:todo="item" v-bind:key="item.id"></todo-item>
+        </ol>
+    </div>
+
     <script src="index.js"></script>
 </body>
 
