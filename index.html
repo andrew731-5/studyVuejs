@@ -10,11 +10,10 @@
 
 <body>
 
-    <!-- データバインディング -->
     <div id="app">
-        <input type="text" v-model="message">
-        <!-- 追加 -->
-        <p>{{ message }}</p>
+        <ul>
+            <li v-for="item in items">{{ item.title }}</li>
+        </ul>
     </div>
 
     <script src="index.js"></script>
