@@ -10,29 +10,11 @@
 
 <body>
 
-    <div id="app-4">
-        <ol>
-            <li v-for="todo in todos">
-                {{ todo.text }}
-            </li>
-        </ol>
-    </div>
-
-    <div id="app-5">
+    <!-- データバインディング -->
+    <div id="app">
+        <input type="text" v-model="message">
+        <!-- 追加 -->
         <p>{{ message }}</p>
-        <button v-on:click="reverseMessage">Reverse Message</button>
-    </div>
-
-    <div id="app-6">
-        <p>{{ message }}</p>
-        <input v-model="message">
-    </div>
-
-    <!--  app-7 -->
-    <div id="app-7">
-        <ol>
-            <todo-item v-for="item in groceryList" v-bind:todo="item" v-bind:key="item.id"></todo-item>
-        </ol>
     </div>
 
     <script src="index.js"></script>
