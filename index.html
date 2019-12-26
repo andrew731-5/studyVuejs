@@ -8,17 +8,28 @@
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
 </head>
 
+<style>
+    .done {
+        text-decoration: line-through;
+    }
+</style>
+
 <body>
 
     <div id="app">
         <ul>
             <li v-for="item in items">
-                <label>
+                <label v-bind:class="{done: item.isChecked}">
                         <input type="checkbox" v-model="item.isChecked">{{ item.title }}
                     </label>
             </li>
         </ul>
+        <p>
+            <input type="text" placeholder="TODOを入力しましょう！" v-model="newItemTitle" v-on:keyup.enter="addTodo"></p>
+        <button v-on:click="deleteTodo()">チェック済みの項目を削除する</button>
     </div>
+
+
 
     <script src="index.js"></script>
 </body>
